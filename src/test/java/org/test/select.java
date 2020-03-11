@@ -12,6 +12,8 @@ public class select extends HelperClass {
 		WebElement ty = findXpath("//a[text()='Careers']");
 	sleep(3000);
 	scrolDown(ty);
+	System.out.println("done");
+	
 }
 
 }
