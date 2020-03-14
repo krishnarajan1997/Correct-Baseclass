@@ -21,6 +21,7 @@ public static Actions a;
 public static Robot r;
 public static Select s;
 public static JavascriptExecutor js;	
+public static int n;
 public static void launchBrowser() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\eclipse-workspace\\UtilityClass\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();
@@ -195,6 +196,30 @@ public static void launchBrowser() {
 		public static void getTheFirstSelectedOption() {
 		WebElement option = s.getFirstSelectedOption();
 		System.out.println(option.getText());
+		}
+		public static void selectedByValue(WebElement e, String s) {
+			// TODO Auto-generated method stub
+			new Select(e).selectByValue(s);
+		}
+		public static void selectedByVisibleText(WebElement e, String s) {
+		new Select(e).selectByVisibleText(s);
+		}
+
+		public static void selectedByIndex(WebElement e) {
+		new Select(e).deselectAll();
+		}
+		public static void deselectedByIndex(WebElement e,int t) {
+			new Select(e).deselectByIndex(t);
+			}
+		public static void deselectedByvalue(WebElement e,String s) {
+			new Select(e).deselectByValue(s);
+			}
+		public static void deselectedByVisibleText(WebElement e,String s) {
+			new Select(e).deselectByVisibleText(s);
+			}
+
+		public static void deselectedAll(WebElement e, String s) {
+		new Select(e).deselectByVisibleText(s);
 		}
 	public static void switchFrameId(String x) {
 	driver.switchTo().frame(x);
