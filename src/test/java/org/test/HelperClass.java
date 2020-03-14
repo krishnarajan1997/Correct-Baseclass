@@ -22,6 +22,7 @@ public static Robot r;
 public static Select s;
 public static JavascriptExecutor js;	
 public static int n;
+public static int j;
 public static void launchBrowser() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\eclipse-workspace\\UtilityClass\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();
